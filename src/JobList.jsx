@@ -6,7 +6,7 @@ const App = () => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/getJobs')
+    axios.get('https://daily-jobs-server.onrender.com/getJobs')
       .then(response => {
         setJobs(response.data.jobs);
       })
@@ -16,7 +16,7 @@ const App = () => {
   }, []);
 
   return (
-    <div class="job-list">
+    <div className="job-list">
       {jobs.map(job => (
         <JobCard key={job.position} job={job} />
       ))}
