@@ -1,0 +1,44 @@
+/* App.css */
+
+body {
+  background-color: #1f1f1f;
+  color: white; /* Set the overall background color */
+}
+
+.App h1, h2{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+
+}
+
+.job-card {
+  flex-basis: calc(33.33% - 20px); /* Display up to 3 cards in one row */
+  background-color: #252525; /* Set the card background color */
+  font-weight:bold;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+@media (max-width: 768px) {
+  .job-card {
+    flex-basis: calc(50% - 20px); /* Display up to 2 cards in one row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .job-card {
+    flex-basis: 100%; /* Display 1 card in one row on mobile screens */
+  }
+}

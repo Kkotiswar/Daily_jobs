@@ -1,0 +1,29 @@
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.job-card {
+  /* Other styles for the job card */
+  width: calc(33.33% - 20px); /* Adjust the width and margin to your preference */
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .job-card {
+    width: calc(50% - 20px); /* Adjust the width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .job-card {
+    width: 100%; /* Adjust the width for mobile screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .job-list {
+    justify-content: center;
+  }
+}
