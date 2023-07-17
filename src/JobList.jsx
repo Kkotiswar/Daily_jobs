@@ -6,7 +6,7 @@ const App = () => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    axios.get('https://daily-jobs-server.onrender.com/getJobs')
+    axios.get('http://daily-jobs-server.onrender.com/')
       .then(response => {
         setJobs(response.data.jobs);
       })
